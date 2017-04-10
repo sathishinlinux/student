@@ -33,25 +33,9 @@
     <script src="js/app.js"></script>
   </head>
   <body ng-app="myApp">
+  <ion-nav-view ></ion-nav-view>
 
-    <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Students List</h1>
-      </ion-header-bar>
-      <ion-content>
-        <div class="list" ng-controller="StudentController">
-          
-           <div class="item item-avatar" 
-                ng-repeat="student in students | limitTo:totalDisplayed" 
-                ng-model="student" ui-sref="student({stuId: student.id})">
-              <img src="https://randomuser.me/api/portraits/men/{{student.id}}.jpg">
-              <h3>{{student.firstname}} {{student.lastname}}</h3>
-           </div>
-          <ion-infinite-scroll on-infinite="loadMore()"> </ion-infinite-scroll>
-        </div>
-        
-      </ion-content>
-    </ion-pane>
+    
         <script src="js/studentsCtrl.js"></script>
   </body>
 

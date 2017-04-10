@@ -24,8 +24,17 @@ app.run(function($ionicPlatform) {
 })
 
 app.config(function($stateProvider, $urlRouterProvider){
-    $urlRouterProvider.otherwise("/");
-    $stateProvider.state('student', {
+    $urlRouterProvider.otherwise("/student_list");
+    $stateProvider
+    .state('student_list', {
+
+             url: '/student_list',
+            cache:false,
+            templateUrl: 'templates/student-list.html',
+           // controller:'StudentController'
+        })
+
+    .state('student', {
             url: '/student/:stuId',
             templateUrl: 'templates/student-detail.html',
             controller:'StudentController'

@@ -1,10 +1,14 @@
-<ion-view title="Selected List View">    
+<ion-view title="Selected List View">  
+ <ion-nav-bar >
+    <ion-nav-back-button style="color: black">
+    </ion-nav-back-button>
+        </ion-nav-bar>
   <ion-content>   
      <ion-item>
 	    <ion-icon name="football" item-left large></ion-icon>
-	    <h2>{{ student.firstname}} {{ student.lastname}}</h2>
-	    <p>Class : {{ student.class}}</p>
-	    <p>Attendance : {{ student.attendance}}</p>
+	    <h2>{{ student_detail.firstname}} {{ student_detail.lastname}}</h2>
+	    <p>Class : {{ student_detail.class}}</p>
+	    <p>Attendance : {{ student_detail.attendance}}</p>
 	 </ion-item>   	        
   </ion-content>    
 </ion-view>
